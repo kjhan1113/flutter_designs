@@ -131,7 +131,12 @@ class LoginPage1 extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 80),
+                      const SizedBox(height: 30),
+                      const Text(
+                        'Forgot Password',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      const SizedBox(height: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -142,6 +147,14 @@ class LoginPage1 extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.blue,
                               ),
+                              child: const Center(
+                                child: Text(
+                                  'Facebook',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(width: 20),
@@ -151,6 +164,14 @@ class LoginPage1 extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.black,
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  'GitHub',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
                             ),
                           ),

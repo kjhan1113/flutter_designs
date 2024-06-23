@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 10),
             const Center(
               child: Text(
-                'TEST',
+                'Login Design',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 10),
             const Center(
               child: Text(
-                'TEST',
+                'Layout Design',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
