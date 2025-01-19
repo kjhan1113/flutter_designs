@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_designs/components/body_desktop.dart';
+import 'package:flutter_designs/components/body_mobile.dart';
 import 'package:flutter_designs/components/my_elevated_button.dart';
 import 'package:flutter_designs/layout_page/grid_view_1.dart';
+import 'package:flutter_designs/layout_page/layout_builder.dart';
+import 'package:flutter_designs/layout_page/responsive_1.dart';
 import 'package:flutter_designs/login_page/login_page_1.dart';
 import 'package:flutter_designs/login_page/login_page_2.dart';
 
@@ -31,6 +35,11 @@ class MyApp extends StatelessWidget {
         '/login1': (context) => const LoginPage1(),
         '/login2': (context) => const LoginPage2(),
         '/grid1': (context) => const GridView1(),
+        '/responsive': (context) => const ResponsiveDesign(),
+        '/layoutbuilder': (context) => const ResponsiveLayoutBuilder(
+              mobileBody: BodyMobile(),
+              desktopBody: BodyDesktop(),
+            ),
       },
       home: const MyHomePage(title: 'Flutter Designs'),
     );
@@ -110,8 +119,8 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(10.0), // Grid padding
               childAspectRatio: 1.0,
               children: const [
-                MyElevatedButton(text: 'login1', routeName: '/login1'),
-                MyElevatedButton(text: 'login2', routeName: '/login2'),
+                MyElevatedButton(text: 'MediaQuery', routeName: '/responsive'),
+                MyElevatedButton(text: 'LayoutBuilder', routeName: '/layoutbuilder'),
                 MyElevatedButton(text: 'login', routeName: '/login1'),
                 MyElevatedButton(text: 'login', routeName: '/login1'),
                 MyElevatedButton(text: 'login', routeName: '/login1'),
