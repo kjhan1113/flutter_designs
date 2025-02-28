@@ -3,6 +3,7 @@ import 'package:flutter_designs/components/body_desktop.dart';
 import 'package:flutter_designs/components/body_mobile.dart';
 import 'package:flutter_designs/components/my_elevated_button.dart';
 import 'package:flutter_designs/layout_page/grid_view_1.dart';
+import 'package:flutter_designs/layout_page/hero_widget_1.dart';
 import 'package:flutter_designs/layout_page/layout_builder.dart';
 import 'package:flutter_designs/layout_page/responsive_1.dart';
 import 'package:flutter_designs/login_page/login_page_1.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
               mobileBody: BodyMobile(),
               desktopBody: BodyDesktop(),
             ),
+        '/hero': (context) => const HeroWidget1(),
       },
       home: const MyHomePage(title: 'Flutter Designs'),
     );
@@ -56,10 +58,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<String> items1 = List.generate(10, (index) => "Item $index");
-  final List<String> items2 = List.generate(10, (index) => "Item $index");
-  final List<String> items3 = List.generate(10, (index) => "Item $index");
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,21 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            GridView.count(
+            ListView(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              crossAxisCount: 3,
-              crossAxisSpacing: 10.0, // Spacing between columns
-              mainAxisSpacing: 10.0, // Spacing between rows
-              padding: const EdgeInsets.all(10.0), // Grid padding
-              childAspectRatio: 1.0,
               children: const [
-                MyElevatedButton(text: 'login1', routeName: '/login1'),
-                MyElevatedButton(text: 'login2', routeName: '/login2'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
+                MyElevatedButton(text: 'Login 1', routeName: '/login1'),
+                MyElevatedButton(text: 'Login 2', routeName: '/login2'),
               ],
             ),
             const SizedBox(height: 10),
@@ -110,21 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            GridView.count(
+            ListView(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              crossAxisCount: 3,
-              crossAxisSpacing: 10.0, // Spacing between columns
-              mainAxisSpacing: 10.0, // Spacing between rows
-              padding: const EdgeInsets.all(10.0), // Grid padding
-              childAspectRatio: 1.0,
               children: const [
                 MyElevatedButton(text: 'MediaQuery', routeName: '/responsive'),
                 MyElevatedButton(text: 'LayoutBuilder', routeName: '/layoutbuilder'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
+                MyElevatedButton(text: 'Hero Widget', routeName: '/hero'),
               ],
             ),
             const SizedBox(height: 10),
@@ -138,21 +119,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            GridView.count(
+            ListView(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              crossAxisCount: 3,
-              crossAxisSpacing: 10.0, // Spacing between columns
-              mainAxisSpacing: 10.0, // Spacing between rows
-              padding: const EdgeInsets.all(10.0), // Grid padding
-              childAspectRatio: 1.0,
               children: const [
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login2', routeName: '/login2'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
-                MyElevatedButton(text: 'login', routeName: '/login1'),
+                MyElevatedButton(text: 'Login 1', routeName: '/login1'),
+                MyElevatedButton(text: 'Login 2', routeName: '/login2'),
               ],
             ),
           ],
